@@ -43,7 +43,10 @@ const router = new VueRouter({
                 component: NotFound,
             }
 
-        ]
+        ],
+        scrollBehavior(to, from, savedPosition) {
+            return { x: 0, y: 0 }; // Scrolla all'inizio
+        }
 })
 
 export default router;
