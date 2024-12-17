@@ -28,7 +28,7 @@ window.Vue = require('vue');
  */
 
 // The checkout route
-const checkout = require('../checkout');
+const checkout = require('../js/checkout.js');
 app.use('/checkout', checkout);
 
 const app = new Vue({
