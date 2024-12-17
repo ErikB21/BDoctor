@@ -23,15 +23,15 @@
           <td>
             @for ($n = 1; $n <= 5; $n++)
                 @if ($review->vote < $n)
-                    <i class="fa-star fa-regular"></i>
+                    <i class="fa-star fa-regular border-b"></i>
                 @else
-                    <i class="fa-star text-warning fa-solid"></i> 
+                    <i class="fa-star text-warning fa-solid"></i>
                 @endif
             @endfor
           </td>
           <td>{{$review->created_at}}</td>
           <td class="text-center">
-            <a href="{{route('admin.reviews.show', ['review' => $review->id])}}" class="btn btn-success">Vedi</a>
+            <a href="{{route('admin.reviews.show', ['review' => $review->id])}}" class="btn btn-b">Vedi</a>
         </td>
         </tr>
         @endforeach
@@ -39,3 +39,24 @@
     </table>
   </div>
 @endsection
+
+<style>
+    thead{
+        background-color: #0A4067!important;
+    }
+
+    .border-b{
+        border-color: #0A4067;
+    }
+
+    .btn-b{
+        background-color: #0A4067!important;
+        color: #fff!important;
+    }
+
+    .btn-b:hover{
+        background-color: #fff!important;
+        color: #0A4067!important;
+        border-color: #0A4067!important;
+    }
+</style>
