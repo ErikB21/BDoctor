@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="eb_jumbotron px-0 container-fluid">
+    <div class="eb_jumbotron px-0 container-fluid position-fixed" style="top: 65px; width: 100%; left: 0; z-index: 102;">
       <img src="/images/graphics/wave.svg" alt="">
     </div>
-    
+
     <div class="eb_jumbo container-fluid px-0"></div>
     <div class="container-fluid px-0">
       <div class="eb_height">
@@ -41,14 +41,14 @@
       <JumboComponent/>
 
 
-  
+
       <div class="ourDoctors text-center">
         <h1 class="text-pop-up-top font-weight-bold">Scegli il tuo prossimo Specialista!</h1>
-    
+
         <div class="container m-auto col-8">
           <div class="row justify-content-center align-items-center">
 
-            
+
 
             <div class="col-12 col-md-6 col-lg-4">
               <div class="filters mb-5 mr-2 d-flex flex-column">
@@ -69,10 +69,10 @@
                 <div class="num-recensioni d-flex flex-column">
                   <input type="range" v-model="reviewsCheck" min="0" max="10" name="reviewsRange" id="reviewsRange">
                   <span>{{reviewsCheck}}</span>
-                </div> 
+                </div>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
 
         <div class="col-12 d-flex flex-column justify-content-center">
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-      
+
 
         <div v-if="profiles.length > 0" class="container-fluid pb-5">
           <div class="d-flex my_cards flex-wrap position-relative">
@@ -144,10 +144,10 @@ export default {
   mounted(){
     this.getData()
     this.getSpecializations()
-    
+
   },
 
-  
+
 
   methods: {
 
@@ -159,8 +159,8 @@ export default {
       axios.get('/api/specializations/')
       .then((response) =>{
       this.specializations = response.data.results
-      })  
-    }, 
+      })
+    },
 
     getData(){
       axios.get('api/users',{
@@ -170,12 +170,12 @@ export default {
           reviewsNumber: this.reviewsCheck
         }
       })
-      .then( resolve => { 
+      .then( resolve => {
         this.profiles = resolve.data.results;
       })
     }
-      
-  },           
+
+  },
 }
 </script>
 
@@ -219,6 +219,15 @@ export default {
       }
   }
 
+  @media screen and (max-width:420px) {
+    .eb_jumbotron{
+        max-width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+  }
+
   @media screen and (max-width:625px) {
 
     .eb_height{
@@ -238,7 +247,7 @@ export default {
       .filters_2{
         width: 80%;
       }
-      
+
     }
   }
 
@@ -277,8 +286,8 @@ export default {
 
   }
 
-  
-  
+
+
 </style>
 
 

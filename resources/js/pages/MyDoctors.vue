@@ -12,7 +12,7 @@
               <h5 class="font-weight-bold pl-2 pl-md-0 text-secondary">INDIRIZZO</h5>
               <span class="textGray pl-2 pl-md-0">{{profile.address}}</span>
               <h5 class="mt-2 pl-2 pl-md-0 font-weight-bold text-secondary">SPECIALIZZAZIONI</h5>
-              <span  class="textGray pl-2 pl-md-0" v-for="(spec , index) in profile.specializations" :key = "index">{{spec.name}} </span>
+              <span  class="textGray pl-2 pl-md-0" v-for="(spec , index) in profile.specializations" :key = "index">{{spec.name}}-</span>
               <h5 class="mt-2 pl-2 pl-md-0 font-weight-bold text-secondary">PRESTAZIONI OFFERTE</h5>
               <span class="textGray pl-2 pl-md-0">{{profile.services}}</span>
               <div v-if="profile.cv">
@@ -26,11 +26,11 @@
           <div class="container my-5 border-left border-primary">
               <h5 class="pl-2 pl-md-0 mt-2 font-weight-bold text-secondary">E-MAIL</h5>
               <span class="pl-2 pl-md-0 textGray">{{profile.email}}</span>
-              <h5 class="pl-2 pl-md-0 mt-2 font-weight-bold text-secondary">TELEFONO</h5>  
+              <h5 class="pl-2 pl-md-0 mt-2 font-weight-bold text-secondary">TELEFONO</h5>
               <span class="pl-2 pl-md-0 textGray">{{profile.phone}}</span><br>
               <router-link :to="{name:'MessageForm'}" class="ml-2 ml-md-0 btn btn-group mt-2">Invia messaggio</router-link>
           </div>
-          
+
       </div>
     </div>
 
@@ -38,7 +38,7 @@
     <div class="m-auto text-center">
         <router-link class="btn" :to="{name:'AllReviews'} ">Tutte le recensioni</router-link>
     </div>
-    
+
 
     <div class="text-center">
       <form @submit.prevent='sendreview()'>
@@ -85,7 +85,7 @@
       <router-link :to="{name: 'MyHome'}" class="btn mb-3"><i class="fa-solid fa-arrow-left"></i> Torna alla Home</router-link>
     </div>
   </div>
-  
+
 </template>
 
 <script>
@@ -153,7 +153,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  
+
   .eb_title{
     font-size: 4.5rem;
   }
@@ -170,7 +170,7 @@ export default {
     outline-color: #3da9fc;
     border: none;
   }
-  
+
   .btn{
     background-color:#0A4067;
     color: whitesmoke;

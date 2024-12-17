@@ -1,15 +1,15 @@
 <template>
-    <div class="navbar px-3 navbar-expand-md">
+    <div class="navbar px-3 navbar-expand-md position-fixed" style="top: 0; width: 100%;">
 
-        
+
         <div class="img-wrapper">
             <img class="logo-img" src="/images/Bdoctors Logo 1000.png" alt="">
         </div>
         <span class="ml-3 font-weight-bold logo-title">BDoctors</span>
         <ul class="navbar-nav mr-auto">
-             
+
         </ul>
- 
+
         <div class="navbar navbar-expand-md shadow-sm">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon d-flex justify-content-center align-items-center">
@@ -30,7 +30,7 @@
         </div>
     </div>
  </template>
- 
+
  <script>
  export default {
      name: 'HeaderComponent',
@@ -41,13 +41,13 @@
                      name: 'Home',
                      routeLink: 'MyHome'
                  },
-                 
+
              ]
          }
      }
  }
  </script>
- 
+
  <style scoped lang="scss">
     .navbar{
         background-color:#094067;
@@ -68,14 +68,13 @@
             object-fit: cover;
         }
 
-        
+
     }
 
     .logo-title {
-            
+
             color: #ef4565;
             font-size: 30px;
         }
 
  </style>
- 
