@@ -12,9 +12,51 @@
      object-fit: cover;
 }
 
+.eb_square_sponsor_base {
+  width: 250px;
+  height: 250px;
+  border-radius: 13px;
+  border: 3px solid #3490dc;
+}
+
+.eb_square_sponsor_base img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.eb_square_sponsor_medium {
+  width: 250px;
+  height: 250px;
+  border-radius: 13px;
+  border: 3px solid #38c172;
+}
+
+.eb_square_sponsor_medium img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.eb_square_sponsor_pro {
+  width: 250px;
+  height: 250px;
+  border-radius: 13px;
+  border: 3px solid #efb810;
+}
+
+.eb_square_sponsor_pro img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .eb_btn {
-  background-color: #0A4067;
-  color: whitesmoke;
+  background-color: #fff;
+  color: #0A4067;
 }
 
 .eb_btn:hover {
@@ -24,12 +66,13 @@
 
 .my-radius-bg {
   border-radius: 15px;
-  border: 1px solid #0A4067;
-  background-color: #C6EAEC;
+  border: 1px solid #fff;
+  background-color: #0A4067;
+  color: #fff;
 }
 
 .lightBg {
-  background-color: #C6EAEC;
+  background-color: #0A4067;
 }
 
 .confirmSponsorship {
